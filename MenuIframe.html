@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            document.onkeydown = function(e) {
+               if(event.keyCode == 123) {
+                  return false;
+               }
+               if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+                  return false;
+               }
+               if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                  return false;
+               }
+               if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                  return false;
+               }
+               if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                  return false;
+               }
+            }
+        </script>
+
+        <style>
+            body {
+                float: left;
+                margin: -1px -1px;
+                background-color: #000;
+            }
+            div {
+                display: inline-block;
+            }
+            .row {
+                margin-right:5px;
+                position: fixed;
+                transform: translateX(66.4%);
+                white-space:nowrap;
+                display:inline-block;
+            }
+            .Button {
+                float: left;
+                margin-left: -1px;
+            }
+        </style>
+        <div class="row">
+        <button type="button" class="Button" style="width:76px;height:40px;opacity: 0%;" onclick="document.getElementById('menu').src='CAMIMG/Aimbot.png'"></button>
+        <button type="button" class="Button" style="width:91px;height:40px;opacity: 0%;" onclick="document.getElementById('menu').src='CAMIMG/Triggerbot.png'"></button>
+        <button type="button" class="Button" style="width:76px;height:40px;opacity: 0%;" onclick="document.getElementById('menu').src='CAMIMG/ESP.png'"></button>
+        <button type="button" class="Button" style="width:76px;height:40px;opacity: 0%;" onclick="document.getElementById('menu').src='CAMIMG/Visuals.png'"></button>
+        <button type="button" class="Button" style="width:76px;height:40px;opacity: 0%;" onclick="document.getElementById('menu').src='CAMIMG/Misc.png'"></button>
+        <button type="button" class="Button" style="width:76px;height:40px;opacity: 0%;" onclick="document.getElementById('menu').src='CAMIMG/Config.png'"></button>
+        </div>
+        <img draggable="false" src="CAMIMG/Aimbot.png" class="menu" id="menu" onerror="javascript: alert('Menu preview failed to load, Nice job retard')">
+    </body>
+</html>
